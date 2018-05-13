@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div text-center class="img-wrap">
+    <img src="assets/imgs/logo.png" />
+  </div>
+  <h2 text-center>Muhammad Rizwan</h2>
+
+
+  <form text-left>
+    <ion-list class="form-inputs">
+    
+      <ion-item>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <button ion-button full color="danger">Block Button</button>
+  </form>
+  <p>New User? <a href="register">Register</a></p>
+  
+
+  
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs class="tabs-icon-text" color="royal">
+      <ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="flame" tabTitle="Fire" [root]="rootPage"></ion-tab>
+      <ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
