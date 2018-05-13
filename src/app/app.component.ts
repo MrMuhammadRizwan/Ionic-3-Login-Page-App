@@ -15,9 +15,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
-
   pages: Array<{title: string, component: any}>;
-
+  users = this.users;
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
@@ -26,6 +25,13 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Register', component: RegisterPage},
+    ];
+    this.users =[
+      { username: 'rizwan', password: 12345 },
+      { username: 'usman',  password: 12345 },
+      { username: 'irfan',  password: 12345 },
+      { username: 'jhone',  password: 12345 },
+      { username: 'admin',  password:'admin'}
     ];
 
   }
