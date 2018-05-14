@@ -15,7 +15,7 @@
   <h2 text-center>Muhammad Rizwan</h2>
 
 
-  <form text-left>
+  <form text-left class="form-wrap">
     <ion-list class="form-inputs">
     
       <ion-item>
@@ -39,11 +39,22 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-tabs class="tabs-icon-text" color="royal">
-      <ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
-      <ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
-      <ion-tab tabIcon="flame" tabTitle="Fire" [root]="rootPage"></ion-tab>
-      <ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
-    </ion-tabs>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col col-4>
+          <ion-icon name="home"></ion-icon>
+          <span>Home</span>
+        </ion-col>
+        <ion-col col-4>
+          <ion-icon name="ios-paper"></ion-icon>
+          <span>About</span>
+        </ion-col>
+        <ion-col col-4>
+          <ion-icon name="ios-send"></ion-icon>
+          <span>Contact</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+     
   </ion-toolbar>
 </ion-footer>
