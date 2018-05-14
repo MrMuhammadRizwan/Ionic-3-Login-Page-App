@@ -33,7 +33,7 @@ export class LoginPage {
     let password = this.password;
     // let uname = '';
     // let upass = '';
-     if(this.uname.length < 1){
+    if(this.uname.length < 1){
       let toast = this.toastCtrl.create({
         message: 'Username can\'t empty',
         duration: 3000
@@ -47,7 +47,7 @@ export class LoginPage {
       });
       toast.present();
       return
-    }else if (this.uname != username && this.upass != password) {
+    } else if (this.uname != username && this.upass != password) {
       let toast = this.toastCtrl.create({
         message: 'Incorrect Username/Password',
         duration: 3000
