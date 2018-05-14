@@ -12,7 +12,7 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: 'login.html'
 })
 export class LoginPage {
- username= 'mrizo';
+ username= 'admin';
  password='admin';
  uname = '';
  upass='';
@@ -29,17 +29,39 @@ export class LoginPage {
     console.log(this.uname)
     console.log(this.upass)
     
-    
     let username = this.username;
     let password = this.password;
     // let uname = '';
     // let upass = '';
-    // if (uname != username && upass!=password){
-    //   alert('incorrect username/password')
-    // }
-    // else{
-    //   alert('successfully login!')
-    // }
+     if(this.uname.length < 1){
+      let toast = this.toastCtrl.create({
+        message: 'Username can\'t empty',
+        duration: 3000
+      });
+      toast.present();
+      return
+    } else if (this.upass.length < 1){
+      let toast = this.toastCtrl.create({
+        message: 'Password can\'t empty',
+        duration: 3000
+      });
+      toast.present();
+      return
+    }else if (this.uname != username && this.upass != password) {
+      let toast = this.toastCtrl.create({
+        message: 'Incorrect Username/Password',
+        duration: 3000
+      });
+      toast.present();
+    }
+    else{
+      let toast = this.toastCtrl.create({
+        message: 'Login successfully | Dashboard',
+        duration: 3000
+      });
+      toast.present();
+      this.navCtrl.push(HomePage);
+    }
     // let toast = this.toastCtrl.create({
     //   message: 'User login successfully',
     //   duration: 3000
