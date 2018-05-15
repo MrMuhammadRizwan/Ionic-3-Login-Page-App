@@ -9,6 +9,7 @@ import { DirectoryPage } from '../pages/directory/directory';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
+import { LogoutPage } from '../pages/logout/logout';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DirectoryPage,
     AboutPage,
     ContactPage,
-    LoginPage
+    LoginPage,
+    LogoutPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DirectoryPage,
     AboutPage,
     ContactPage,
-    LoginPage
+    LoginPage,
+    LogoutPage
   ],
   providers: [
     StatusBar,
