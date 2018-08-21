@@ -4,10 +4,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { DirectoryPage } from '../pages/directory/directory';
 import { LoginPage } from '../pages/login/login';
-
+// import { WeatherPage } from '../pages/weather/weather';
+// import { AddDirectoryPage } from '../pages/adddirectory/adddirectory';
+// import { ImagesPage } from '../pages/images/images';
+// import { PostsPage } from '../pages/posts/posts';
+// import { AddPostPage } from '../pages/addpost/addpost';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,37 +20,30 @@ export class MyApp {
   rootPage: any = LoginPage;
   pages: Array<{title: string, component: any}>;
   users = this.users;
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
     this.pages = [     
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Directory', component: DirectoryPage},
-    ];
-    this.users =[
-      { username: 'rizwan', password: 12345 },
-      { username: 'usman',  password: 12345 },
-      { username: 'irfan',  password: 12345 },
-      { username: 'jhone',  password: 12345 },
-      { username: 'admin',  password:'admin'}
+      { title: 'Home', component: HomePage }
     ];
 
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  logout(){
+    console.log('logout');
+    this.nav.setRoot(HomePage);
   }
 }

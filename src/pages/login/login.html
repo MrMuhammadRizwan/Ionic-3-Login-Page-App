@@ -1,18 +1,9 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
 
   <div text-center class="img-wrap">
     <img src="assets/imgs/person.png" />
   </div>
-  <h2 text-center class="author">Muhammad Rizwan</h2>
+  <h4 text-center class="author">I'M<br/> Invoices Management System</h4>
 
 
   <form text-left class="form-wrap" (ngSubmit)="loginUser(form)">
@@ -30,33 +21,5 @@
     <button type="submit" ion-button full color="danger" >Login</button>
   </form>
 
-
-
-
-
-
-
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-grid text-center>
-      <ion-row>
-        <ion-col col-4 (click)="homepage()">
-          <ion-icon name="home"></ion-icon>
-          <span>Home</span>
-        </ion-col>
-        <ion-col col-4  (click)="aboutpage()">
-          <ion-icon name="ios-paper"></ion-icon>
-          <span>About</span>
-        </ion-col>
-        <ion-col col-4 (click)="contactpage()">
-          <ion-icon name="ios-send"></ion-icon>
-          <span>Contact</span>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  </ion-toolbar>
-</ion-footer>
 

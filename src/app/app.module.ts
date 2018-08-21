@@ -4,44 +4,43 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { DirectoryPage } from '../pages/directory/directory';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
-import { LogoutPage } from '../pages/logout/logout';
+// import { OrdersPage } from '../pages/orders/orders';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { File } from '@ionic-native/file';
+import { HTTP } from '@ionic-native/http';
+import { HttpModule } from '@angular/http';
+// import { Http } from '@angular/http';
+// import { HttpModule } from '@angular/http';
+// import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    DirectoryPage,
-    AboutPage,
-    ContactPage,
     LoginPage,
-    LogoutPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
+    // IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    DirectoryPage,
-    AboutPage,
-    ContactPage,
     LoginPage,
-    LogoutPage
   ],
   providers: [
     StatusBar,
+    File,
+    HTTP,
+    // HttpModule,
+    // Http,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

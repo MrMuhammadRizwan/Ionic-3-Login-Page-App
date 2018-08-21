@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { DirectoryPage } from '../directory/directory';
 import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -14,8 +11,8 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 export class LoginPage {
  username= 'admin';
  password='admin';
- uname = '';
- upass='';
+ uname = 'admin';
+ upass='admin';
   private todo: FormGroup;
   constructor(
     public navCtrl: NavController, 
@@ -31,8 +28,6 @@ export class LoginPage {
     
     let username = this.username;
     let password = this.password;
-    // let uname = '';
-    // let upass = '';
     if(this.uname.length < 1){
       let toast = this.toastCtrl.create({
         message: 'Username can\'t empty',
@@ -60,21 +55,7 @@ export class LoginPage {
         duration: 3000
       });
       toast.present();
-      this.navCtrl.push(HomePage);
+      this.navCtrl.setRoot(HomePage);
     }
-    // let toast = this.toastCtrl.create({
-    //   message: 'User login successfully',
-    //   duration: 3000
-    // });
-    // toast.present();
-  }
-  homepage() {
-    this.navCtrl.push(HomePage);
-  }
-  aboutpage() {
-    this.navCtrl.push(AboutPage);
-  }
-  contactpage() {
-    this.navCtrl.push(ContactPage);
   }
 }
